@@ -20,6 +20,8 @@ class PagesController < ApplicationController
     expires_in 6.hours, public: true
   end
 
+  def about; end
+
   # def contacts; end
 
   private

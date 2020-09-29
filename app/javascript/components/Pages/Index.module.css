@@ -16,9 +16,9 @@
   margin-bottom: calc(var(--yr) * var(--s3));
 
   @media (--s) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: calc(var(--yr) * 2);
-    margin-bottom: calc(var(--yr) * var(--s3) * 2);
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-gap: calc(var(--yr) * 2); */
+    /* margin-bottom: calc(var(--yr) * var(--s3) * 2); */
   }
 
   &.single {
@@ -41,15 +41,24 @@
   display: block;
   overflow: hidden;
 
+  & .text {
+    @media (--s) {
+      max-width: 30rem;
+    }
+  }
+
   &::before {
     background: rgba(0, 0, 0, 0.24);
     display: block;
     content: '';
     padding-top: calc(4 / 3 * 100%);
 
+    @media (--s) {
+      padding-top: calc(1 / 1 * 100%);
+    }
 
-    @media (--l) {
-      padding-top: calc(6 / 5 * 100%);
+    @media (--m) {
+      padding-top: calc(1 / 2 * 100%);
     }
   }
 }

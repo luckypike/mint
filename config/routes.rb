@@ -8,6 +8,7 @@ Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
   get :wishlist, to: 'wishlists#show'
 
   get :search, to: 'search#index'
+  get :about, to: 'pages#about'
 
   resources :variants, except: [:show] do
     collection do

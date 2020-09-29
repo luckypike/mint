@@ -37,7 +37,7 @@ export default function Index ({ slides: slidesJSON, instagram, locale }) {
     <ErrorBoundary>
       <div className={styles.root}>
         <div className={classNames(styles.slides, { [styles.single]: slides.length === 1 })} id="slides">
-          {slides.slice(0, 2).map(slide =>
+          {slides.slice(0, 1).map(slide =>
             <Slide
               key={slide.id}
               slide={slide}
@@ -47,9 +47,9 @@ export default function Index ({ slides: slidesJSON, instagram, locale }) {
         </div>
 
         <div className={styles.content}>
-          {slides.length > 2 &&
+          {slides.length > 1 &&
             <div className={styles.subslides}>
-              {slides.slice(2, slides.length).map(slide =>
+              {slides.slice(1, slides.length).map(slide =>
                 <Slide
                   key={slide.id}
                   slide={slide}
