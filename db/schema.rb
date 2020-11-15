@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_045350) do
+ActiveRecord::Schema.define(version: 2020_11_13_161734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,6 +99,17 @@ ActiveRecord::Schema.define(version: 2020_09_01_045350) do
     t.text "desc"
     t.index ["category_id"], name: "index_category_translations_on_category_id"
     t.index ["locale"], name: "index_category_translations_on_locale"
+  end
+
+  create_table "certs", force: :cascade do |t|
+    t.decimal "discount"
+    t.integer "discount_type"
+    t.integer "amount"
+    t.string "code"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_certs_on_user_id"
   end
 
   create_table "collection_translations", force: :cascade do |t|
@@ -555,6 +566,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_045350) do
   add_foreign_key "carts", "sizes"
   add_foreign_key "carts", "users"
   add_foreign_key "carts", "variants"
+  add_foreign_key "certs", "users"
   add_foreign_key "discounts", "users"
   add_foreign_key "identities", "users"
   add_foreign_key "kitables", "variants"

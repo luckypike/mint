@@ -11,30 +11,6 @@ class VariantPolicy < ApplicationPolicy
     user
   end
 
-  def latest?
-    all?
-  end
-
-  def premium?
-    all?
-  end
-
-  def last?
-    all?
-  end
-
-  def sale?
-    all?
-  end
-
-  def stayhome?
-    all?
-  end
-
-  def section?
-    all?
-  end
-
   def availabilities?
     user&.editor?
   end

@@ -1,3 +1,5 @@
+import '../css/variables'
+import '../css/app'
 import 'normalize.css/normalize'
 // import 'react-phone-number-input/style.css'
 import 'react-phone-input-2/lib/style.css'

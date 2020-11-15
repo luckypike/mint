@@ -10,10 +10,4 @@ describe VariantPolicy do
       expect(subject).to permit(anonymous_user, Order)
     end
   end
-
-  permissions :latest?, :sale?, :last?, :premium?, :stayhome?, :morning? do
-    it 'grants access for all' do
-      expect(subject).to permit(anonymous_user, Order)
-    end
-  end
 end

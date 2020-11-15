@@ -12,7 +12,6 @@
   --wht_color: #fff;
   --ph_color: #f8f8f8;
 
-
   --highlight_color: #9caa73;
   --highlight_color: var(--hl_color);
   --highlight_secondary_color: #ff5252;
@@ -37,8 +36,3 @@
     --s4: 12;
   }
 }
-
-@custom-media --s (min-width: 720px);
-@custom-media --m (min-width: 960px);
-@custom-media --l (min-width: 1280px);
-@custom-media --xl (min-width: 1600px);
